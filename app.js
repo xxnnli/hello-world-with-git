@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//set up mongdb connection
+//set up mongdb connection and controllers of db
 mongo.Db.connect("mongodb://localhost:27017/swiftGiftProj",{auto_reconnect:true}, function(err, db) {
     if(!err) {
 	console.log("db connection OK!");
